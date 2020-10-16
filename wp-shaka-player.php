@@ -27,9 +27,9 @@ function my_load_scripts($hook) {
     $my_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ));
      
 	
-	wp_register_script( 'shaka-cdn', '//cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.4/shaka-player.compiled.js', null, null, true );
+	wp_register_script( 'shaka-cdn', plugins_url( 'js/custom.js', __FILE__ ), array('jquery'), '3.0.4', true );
 	wp_enqueue_script ('shaka-cdn');
-		wp_register_script( 'shaka-ui-cdn', '//cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.4/shaka-player.ui.min.js', null, null, true );
+	wp_register_script( 'shaka-ui-cdn', '//cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.4/shaka-player.ui.min.js', null, null, true );
 	wp_enqueue_script ('shaka-ui-cdn');
 	wp_register_style( 'shaka-cdn', '//cdnjs.cloudflare.com/ajax/libs/shaka-player/3.0.4/controls.min.css' );
 	wp_enqueue_style ('shaka-cdn');
