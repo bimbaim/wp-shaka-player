@@ -32,7 +32,7 @@ function my_load_scripts($hook) {
 	wp_register_script( 'shaka-ui-cdn',  plugins_url( 'js/shaka-player.ui.min.js', __FILE__ ), array('jquery'), '3.0.4', true );
 	wp_enqueue_script ('shaka-ui-cdn');
 	wp_register_style( 'shaka-cdn', plugins_url( 'css/controls.min.css', __FILE__ ) );
-	wp_enqueue_style ('shaka-cdn')
+	wp_enqueue_style ('shaka-cdn');
 	
     wp_enqueue_script( 'custom_js', plugins_url( 'js/custom.js', __FILE__ ), array('jquery'), $my_js_ver );
     wp_register_style( 'my_css',    plugins_url( 'style.css',    __FILE__ ), false,   $my_css_ver );
