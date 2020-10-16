@@ -16,7 +16,7 @@
 
  if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  
- 
+include( plugin_dir_path( __FILE__ ) . 'detect-device.php');
  /**
  * Never worry about cache again!
  */
@@ -64,26 +64,26 @@ function shaka_player_shortcode($atts){
 	
 	$link = $args['mpd'];
 	
-	//if ( wonderplugin_is_device('iPhone,iPad') )
-		//{
+	if ( wonderplugin_is_device('iPhone,iPad') )
+		{
 			//$link = $args['m3u8'];
-		//}
+		}
 	
-	//if ( wonderplugin_is_device('Mobile') )
-	//{
-		//$link = $args['mpd'];
-	//}
+	if ( wonderplugin_is_device('Mobile') )
+	{
+		$link = $args['mpd'];
+	}
 
-	//if ( wonderplugin_is_device('iPhone,iPad') )
-	//{
-		//$link = $args['m3u8'];
-	//}
+	if ( wonderplugin_is_device('iPhone,iPad') )
+	{
+		$link = $args['m3u8'];
+	}
 
 
-	//if ( wonderplugin_is_browser('Chrome') )
-	//{
+	if ( wonderplugin_is_browser('Chrome') )
+	{
 		//$link = $args['url_android'];
-	//}
+	}
 
 
 
