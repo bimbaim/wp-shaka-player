@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       WP Shaka Video Player
  * Plugin URI:        #
- * Description:       Use shortcode [shaka-player url='URL']
+ * Description:       Use shortcode [shaka-player mpd='URL video for android' m3u8='URL video for IOS/safari' poster='Image poster']
  * Version:           0.5
  * Requires at least: 5.2
  * Requires PHP:      7.2
